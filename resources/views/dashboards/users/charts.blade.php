@@ -84,24 +84,132 @@
     </script>
     
 
+    
+
     <script>
-        var p_urdu = <?php echo $positive_urdu; ?>;
-        var n_urdu = <?php echo $negative_urdu; ?>;
-        var al_urdu = <?php echo $all_urdu; ?>;
+        var dawn_latest_positive = <?php echo $dawn_latest_positive; ?>;
+        var dawn_latest_negative = <?php echo $dawn_latest_negative; ?>;
+        var dawn_latest_neutral = <?php echo $dawn_latest_neutral; ?>;
+        var dawn_latest_all = <?php echo $dawn_latest_all; ?>;
     </script>
 
     <script>
-        var d_pos = <?php echo $dawn_positive; ?>;
-        var d_neg = <?php echo $dawn_negative; ?>;
-        var d_neu = <?php echo $dawn_neutral; ?>;
-        var d_all = <?php echo $dawn_all; ?>;
+        var dawn_business_positive = <?php echo $dawn_business_positive; ?>;
+        var dawn_business_negative = <?php echo $dawn_business_negative; ?>;
+        var dawn_business_neutral = <?php echo $dawn_business_neutral; ?>;
+        var dawn_business_all = <?php echo $dawn_business_all; ?>;
     </script>
 
     <script>
-        var a_pos = <?php echo $ary_positive; ?>;
-        var a_neg = <?php echo $ary_negative; ?>;
-        var a_neu = <?php echo $ary_neutral; ?>;
-        var a_all = <?php echo $ary_all; ?>;
+        var dawn_world_positive = <?php echo $dawn_world_positive; ?>;
+        var dawn_world_negative = <?php echo $dawn_world_negative; ?>;
+        var dawn_world_neutral = <?php echo $dawn_world_neutral; ?>;
+        var dawn_world_all = <?php echo $dawn_world_all; ?>;
+    </script>
+
+    <script>
+        var ary_world_positive = <?php echo $ary_world_positive; ?>;
+        var ary_world_negative = <?php echo $ary_world_negative; ?>;
+        var ary_world_neutral = <?php echo $ary_world_neutral; ?>;
+        var ary_world_all = <?php echo $ary_world_all; ?>;
+    </script>
+
+    <script>
+        var ary_business_positive = <?php echo $ary_business_positive; ?>;
+        var ary_business_negative = <?php echo $ary_business_negative; ?>;
+        var ary_business_neutral = <?php echo $ary_business_neutral; ?>;
+        var ary_business_all = <?php echo $ary_business_all; ?>;
+    </script>
+    
+    <script>
+        var ary_latest_positive = <?php echo $ary_latest_positive; ?>;
+        var ary_latest_negative = <?php echo $ary_latest_negative; ?>;
+        var ary_latest_neutral = <?php echo $ary_latest_neutral; ?>;
+        var ary_latest_all = <?php echo $ary_latest_all; ?>;
+    </script>
+    
+    <script>
+        var tribune_latest_positive = <?php echo $tribune_latest_positive; ?>;
+        var tribune_latest_negative = <?php echo $tribune_latest_negative; ?>;
+        var tribune_latest_neutral = <?php echo $tribune_latest_neutral; ?>;
+        var tribune_latest_all = <?php echo $tribune_latest_all; ?>;
+    </script>
+    
+    <script>
+        var tribune_world_positive = <?php echo $tribune_world_positive; ?>;
+        var tribune_world_negative = <?php echo $tribune_world_negative; ?>;
+        var tribune_world_neutral = <?php echo $tribune_world_neutral; ?>;
+        var tribune_world_all = <?php echo $tribune_world_all; ?>;
+    </script>
+    
+    <script>
+        var tribune_business_positive = <?php echo $tribune_business_positive; ?>;
+        var tribune_business_negative = <?php echo $tribune_business_negative; ?>;
+        var tribune_business_neutral = <?php echo $tribune_business_neutral; ?>;
+        var tribune_business_all = <?php echo $tribune_business_all; ?>;
+    </script>
+
+    <script>
+        var aryu_world_positive = <?php echo $aryu_world_positive; ?>;
+        var aryu_world_negative = <?php echo $aryu_world_negative; ?>;
+        var aryu_world_neutral = <?php echo $aryu_world_neutral; ?>;
+        var aryu_world_all = <?php echo $aryu_world_all; ?>;
+    </script>
+    
+    <script>
+        var aryu_latest_positive = <?php echo $aryu_latest_positive; ?>;
+        var aryu_latest_negative = <?php echo $aryu_latest_negative; ?>;
+        var aryu_latest_neutral = <?php echo $aryu_latest_neutral; ?>;
+        var aryu_latest_all = <?php echo $aryu_latest_all; ?>;
+    </script>
+    
+    <script>
+        var aryu_business_positive = <?php echo $aryu_business_positive; ?>;
+        var aryu_business_negative = <?php echo $aryu_business_negative; ?>;
+        var aryu_business_neutral = <?php echo $aryu_business_neutral; ?>;
+        var aryu_business_all = <?php echo $aryu_business_all; ?>;
+    </script>
+    
+    <script>
+        var dawnu_business_positive = <?php echo $dawnu_business_positive; ?>;
+        var dawnu_business_negative = <?php echo $dawnu_business_negative; ?>;
+        var dawnu_business_neutral = <?php echo $dawnu_business_neutral; ?>;
+        var dawnu_business_all = <?php echo $dawnu_business_all; ?>;
+    </script>
+    
+    <script>
+        var dawnu_latest_positive = <?php echo $dawnu_latest_positive; ?>;
+        var dawnu_latest_negative = <?php echo $dawnu_latest_negative; ?>;
+        var dawnu_latest_neutral = <?php echo $dawnu_latest_neutral; ?>;
+        var dawnu_latest_all = <?php echo $dawnu_latest_all; ?>;
+    </script>
+    
+    <script>
+        var dawnu_world_positive = <?php echo $dawnu_world_positive; ?>;
+        var dawnu_world_negative = <?php echo $dawnu_world_negative; ?>;
+        var dawnu_world_neutral = <?php echo $dawnu_world_neutral; ?>;
+        var dawnu_world_all = <?php echo $dawnu_world_all; ?>;
+    </script>
+    
+    <script>
+        var tribuneU_latest_positive = <?php echo $tribuneU_latest_positive; ?>;
+        var tribuneU_latest_negative = <?php echo $tribuneU_latest_negative; ?>;
+        var tribuneU_latest_neutral = <?php echo $tribuneU_latest_neutral; ?>;
+        var tribuneU_latest_all = <?php echo $tribuneU_latest_all; ?>;
+    </script>
+    
+    <script>
+        var tribuneUrdu_business_positive = <?php echo $tribuneUrdu_business_positive; ?>;
+        var tribuneUrdu_business_negative = <?php echo $tribuneUrdu_business_negative; ?>;
+        var tribuneUrdu_business_neutral = <?php echo $tribuneUrdu_business_neutral; ?>;
+        var tribuneUrdu_business_all = <?php echo $tribuneUrdu_business_all; ?>;
+    </script>
+    
+    <script>
+        var tribuneUrdu_world_positive = <?php echo $tribuneUrdu_world_positive; ?>;
+        var tribuneUrdu_world_negative = <?php echo $tribuneUrdu_world_negative; ?>;
+        var tribuneUrdu_world_neutral = <?php echo $tribuneUrdu_world_neutral; ?>;
+        var tribuneUrdu_world_all = <?php echo $tribuneUrdu_world_all; ?>;
     </script>
 
     

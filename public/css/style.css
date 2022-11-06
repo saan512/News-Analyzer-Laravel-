@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --primary-color:#4397eb;
+    /* --primaryColor: #f1f1f1; */
+    --black: #222;
+    --black2: #555;
+    --black3: #252525;
+    --black4: #000;
+    --black5: #212529;
+    --orange: #eb0028;
+    --white: #fff;
+    --grey: #959595;
+    --grey2: #666;
+    --grey3: #ccc;
+    --secondaryColor: #2b1f4d;
+    --yellow: #ffcc00;
+    --green: #59b210;
+    --blue: rgb(56, 10, 223);
+}
+
+pre{
+    font-family: 'Lato', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* background-color: #333; */
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    /* background-color: #4397eb; */
+    /* border-color: aliceblue; */
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+h1,h2{
+     font-weight: 300;
+     line-height: 1.2;
+     margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+/* navigation bar */
+.navbar{
+    background-color: var(--primary-color);
+    color: white;
+    height: 70px;
+    /* overflow:auto; */
+    border-color: aliceblue;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    border-bottom: 2px solid white;
+}
+.navbar .flex{
+    justify-content: space-between;
+    margin: 0px 50px;
+}
+
+/* showcase */
+.showcase{
+    /* margin: auto; */
+    height: 400px;
+    /* background-color: var(--primary-color); */
+    color: white;
+    position: relative;
+    overflow: visible;
+}
+
+.showcase h1{
+    font-size: 40px;
+}
+.showcase {
+margin: 20px 0;
+}
+.showcase-form{
+    position: relative;
+    top: 50px;
+    height: 340px;
+    width: 380px;
+    padding: 50px;
+}
+
+.showcase-question{
+    position: relative;
+    top: 0px;
+    height: 340px;
+    width: 380px;
+    padding: 50px;
+}
+
+.section{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+.showcase-form input{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width : 100%;
+    padding: 4px;
+    font-size: 16px;
+}
+.showcase-form input:focus{
+    outline: none;
+}
+.showcase-faq{
+    /* margin: auto; */
+    width: 100%;
+    height: 250px;
+    /* background-color: var(--primary-color); */
+    color: white;
+    position: relative;
+    /* overflow: visible; */
+
+}
+
+
+/* shiwcase btn */
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    border:none;
+    border-radius: 5px;
+}
+/* .btn-question{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    border:none;
+    border-radius: 5px;
+
+} */
+.btn-outline{
+    background-color: transparent;
+    border: 2px solid white;
+}
+.btn:hover{
+    transform: scale(.90);
+    /* transform: rotateX(-10deg); */
+}
+/* utilities */
+.container{
+    max-width: 1100px;
+    margin: -21px auto;
+    /* overflow: auto; */
+    padding: 0 40px;
+    /* overflow: visible; */
+    /* border-color: white; */
+    /* border-radius: 30px; */
+}
+.container_chart{
+    max-width: auto;
+    height: auto;
+    margin: 0px auto;
+    /* overflow: auto; */
+    padding: 0 40px;
+    /* overflow: visible; */
+    /* border-color: white; */
+    /* border-radius: 30px; */
+}
+.container-faq{
+    max-width: 1100px;
+    margin: 30px auto;
+    overflow: auto;
+    padding: 0 40px;
+    /* overflow: visible; */
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns:55% 45% ;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: visible;
+}
+.card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    color: #333;
+    /* overflow: visible;     */
+}
+
+/* Companies */
+.Companies{
+    max-width: auto;
+    /* margin: 70px auto; */
+    margin-top: 35px;
+    overflow: visible;
+    /* padding: 0 40px; */
+    overflow: visible;
+    padding: 65px 240px;
+}
+.Companies .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+  }
+
+/* Table */
+.tbl{
+    border: 4px solid white;
+}
+table td:hover{
+    background-color: white;
+    color: black;
+}
+
+ /*
+  ======================
+  Footer
+  ======================
+  */
+  
+  .footer {
+    /* background-color: var(--black3); */
+    padding: 1rem 2rem;
+    line-height: 3rem;
+  }
+  
+  .footer-top__box span svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--grey3);
+  }
+  
+  .footer-top__box span {
+    /* margin-right: 1rem; */
+    padding: 2px 20px;
+  }
+  
+  .footer__top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* color: var(--grey3); */
+    background-color: white;
+    /* border-color: white; */
+    /* border: solid 2px; */
+  }
+  
+  .footer-top__box a:link,
+  .footer-top__box a:visited {
+    display: block;
+    /* color: red; */
+    font-size: 1.4rem;
+    transition: 0.6s;
+  }
+  
+  .footer-top__box a:hover {
+    color: white;
+    transform: translateY(-3px);
+    transform: scale(1.1);
+    background-color: var(--grey3);
+  }
+  
+  .footer-top__box div {
+    /* color: var(--grey); */
+    font-size: 1.4rem;
+  }
+  
+  .footer-top__box h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  
+  @media only screen and (max-width: 998px) {
+    .footer__top {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .footer__top {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  }
+  .card-footer{
+    background-color: #4397eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    /* overflow: visible;     */
+}
+.box{
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    width: min-content;
+    height: min-content;
+    /* overflow: visible;     */
+}

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --primary-color:#4397eb;
+}
+
+pre{
+    font-family: 'Lato', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* background-color: #333; */
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1,h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+.navbar{
+    background-color: var(--primary-color);
+    color: white;
+    height: 70px;
+    overflow: hidden;
+    /* overflow:auto; */
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    border-bottom: 2px solid white;
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+
+.container_nav{
+    max-width: auto;
+    margin: 0 auto;
+    overflow: auto;
+    padding:0px 40px;
+    overflow: visible;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    color: #333;
+    height: 200px;
+    width: 200px;
+    /* overflow: visible;     */
+}
+
+.card:hover{
+    transform: scale(.90);
+    /* transform: rotateX(-10deg); */
+}
+
+/* Companies */
+.Companies{
+    max-width: auto;
+    margin: 70px auto;
+    overflow: visible;
+    padding: 0 40px;
+    overflow: visible;
+    padding: 65px 240px;
+}
+.Companies .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.showcase{
+    /* margin: auto; */
+    height: 380px;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+    /* overflow: visible; */
+}
+
+.showcase h1{
+    font-size: 40px;
+}
+.showcase {
+margin: 20px 250px;
+border-radius: 30px;
+}

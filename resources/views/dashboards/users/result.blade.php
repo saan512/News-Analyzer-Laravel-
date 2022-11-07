@@ -52,34 +52,72 @@
         </style>
     </head>
     <body>
-        <div class="for_tab">
-            <table>
-                <tr>
-                    {{-- <h2 class="senti_tab">
-                        Dawn_News
-                    </h2> --}}
-                </tr>
-                <tr>
-                    <th class="senti_tab">
-                        News
-                    </th>
-                    <th class="senti_tab">
-                        Sentiments
-                    </th>
-                </tr>
-                @foreach ($scraped_data as $data)
-                    <tr>
-                        <td class="senti_tab">
-                            {{ $data }}
-                        </td>
-                        <td class="senti_tab">
-                            {{ $sentiments[$loop->index] }}
-                        </td>
-                    </tr>
-                @endforeach     
-                
-            </table>
-        </div>
+        <div class="container">
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active ccl" data-toggle="pill" href="#ENGlish">English</a>
+                  </li>      
+                <li class="nav-item">
+                    <a class="nav-link ccl" data-toggle="pill" href="#URDU">Urdu</a>
+                  </li>      
+            </ul>  
+            <!-- Tab panels -->
+            
+            <div class="container border shadow">
+                <div class="tab-content">
+                    <div id="ENGLISH" class="tab-pane show fade active">        
+                        <table>
+                            
+                            <tr>
+                                <th class="senti_tab">
+                                    News
+                                </th>
+                                <th class="senti_tab">
+                                    Sentiments
+                                </th>
+                            </tr>
+                            @foreach ($scraped_data_english as $data)
+                                <tr>
+                                    <td class="senti_tab">
+                                        {{ $data }}
+                                    </td>
+                                    <td class="senti_tab">
+                                        {{ $sentiments_english[$loop->index] }}
+                                    </td>
+                                </tr>
+                            @endforeach     
+                        </table>
+                    </div>
+
+                    <div class=" tab-pane show fade" id="URDU">
+                        <table>
+                            
+                            <tr>
+                                <th class="senti_tab">
+                                    News
+                                </th>
+                                <th class="senti_tab">
+                                    Sentiments
+                                </th>
+                            </tr>
+                            @foreach ($scraped_data_urdus as $data)
+                                <tr>
+                                    <td class="senti_tab">
+                                        {{ $data }}
+                                    </td>
+                                    <td class="senti_tab">
+                                        {{ $sentiments_urdus[$loop->index] }}
+                                    </td>
+                                </tr>
+                            @endforeach     
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>           
+            
+       
     </body>
 
 @endsection

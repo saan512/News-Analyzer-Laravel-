@@ -3,7 +3,7 @@
 
 @section('content')
 
-{{-- <p style="color: rgb(128, 58, 0); font-size : 32px; text-align:center">
+<p style="color: rgb(128, 58, 0); font-size : 32px; text-align:center">
 
     ===================================================================================
 </p>
@@ -36,7 +36,7 @@
 <p style="color: rgb(0, 45, 128); font-size : 32px; text-align:center">
 
     ===================================================================================
-</p> --}}
+</p>
 
 
 

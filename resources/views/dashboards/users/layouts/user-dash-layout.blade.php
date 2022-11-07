@@ -9,25 +9,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('title')</title>
   <base href="{{ \URL::to('/') }}">
+  
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Theme style -->
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous"> -->
+ <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  
 </head>
 <body class="sidebar-mini layout-fixed text-sm">
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light marq">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      <!-- <li class="nav-item d-none d-sm-inline-block">
         <a class="nav-link" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
@@ -37,7 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
             @csrf
         </form>
-      </li>
+      </li> -->
     </ul>
 
 
@@ -48,7 +51,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     {{-- <a href="{{ \URL::to('/home')}}" class="brand-link"> --}}
-    <a href="{{ route('user.dashboard')}}" class="brand-link">
+    <a href="{{ route('supportus')}}" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">News Analyser</span>
     </a>
@@ -84,7 +87,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
                <li class="nav-item">
                 <a href="{{ route('user.news')}}" class="nav-link {{ (request()->is('user/profile*')) ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-home"></i>
+                  <i class="nav-icon fa fa-chart-pie"></i>
                   <p>
                     News Analysis
                   </p>
@@ -92,7 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
                <li class="nav-item">
                 <a href="{{ route('user.results')}}" class="nav-link {{ (request()->is('user/profile*')) ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-user"></i>
+                  <i class="nav-icon fa fa-database"></i>
                   {{-- {{ route('user.profile')}} --}}
                   
                   <p>
@@ -118,6 +121,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                Settings
               </p>
             </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <i class="nav-icon fa fa-sign-out-alt"></i>
+                {{-- {{ __('Logout') }} --}}
+                <p>
+                    Logout
+                  </p>
+            </a>
+    
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
           </li>
         </ul>
       </nav>
@@ -146,10 +165,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+      News Analyzer
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2022-2023 <a href="https://cuiwah.edu.pk/">COMSATS UNIVERSITY ISLAMABAD, WAH CAMPUS</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021-2023 <a href="https://cuiwah.edu.pk/">COMSATS UNIVERSITY ISLAMABAD, WAH CAMPUS</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

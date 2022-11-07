@@ -28,13 +28,33 @@
             border-radius: 20px;
             box-shadow: 0 7px 25px rgba(0,0,0,0.1);
             position: relative;
-            min-height: 10px;
+            min-height: 400px;
+            min-width: 400px;
+        }
+
+        .alin{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 50px;
+        }
+
+        .ccl:hover{
+            background-color: #333;
+            color: #fff;
+            transition: 0.6s;
+        }
+
+        .fade{
+            transition: 0.6s;
         }
 
         @media (max-width: 991px) {
             .graphBox{
                 grid-template-columns: 1fr 1fr;
                 height: auto;
+            }
+            .alin{
+                display: block;
             }
 
         }
@@ -44,15 +64,15 @@
     
 
 <div class="container">
-    <ul class="nav nav-tabs nav-justified" role="tablist">
+    <ul class="nav nav-pills nav-justified" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#ARY">ARY</a>
+            <a class="nav-link active ccl" data-toggle="pill" href="#ARY">ARY</a>
           </li>      
         <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#DAWN">DAWN</a>
+            <a class="nav-link ccl" data-toggle="pill" href="#DAWN">DAWN</a>
           </li>      
         <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#TRIBUNE">Tribune</a>
+            <a class="nav-link ccl" data-toggle="pill" href="#TRIBUNE">Tribune</a>
           </li>
     </ul>  
     <!-- Tab panels -->
@@ -60,43 +80,39 @@
     <div class="graphBox container border shadow">
         <div class="tab-content">
             <div id="ARY" class="tab-pane show fade active">
-                <div class="container">
+                <div class="container alin">
                     {{-- <h2>Ary News</h2> --}}
                     <div class="box">
                         <canvas id="a_l_e"></canvas>
                         <h2>Latest English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="a_l_u"></canvas>
                         <h2>Latest Udru</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
+                </div>
+
+                <div class="container alin">
                     <div class="box">
                         <canvas id="a_w_e"></canvas>
                         <h2>World English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="a_w_u"></canvas>
                         <h2>World Udru</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
+                </div>
+
+                <div class="container alin">
                     <div class="box">
                         <canvas id="a_b_e"></canvas>
                         <h2>Business English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="a_b_u"></canvas>
                         <h2>Business Udru</h2>
@@ -106,44 +122,38 @@
 
             
 
-            <div class=" tab-pane fade" id="DAWN">
-                <div class="container">
+            <div class=" tab-pane show fade" id="DAWN">
+                <div class="container alin">
                     {{-- <h2>Dawn</h2> --}}
                     <div class="box">
                         <canvas id="d_l_e"></canvas>
                         <h2>Latest English</h2>
                     </div>
-                    <div>
-                        <h2></h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="d_l_u"></canvas>
                         <h2>Latest Urdu</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                </div>
+
+                <div class="container alin">
                     <div class="box">
                         <canvas id="d_w_e"></canvas>
                         <h2>World English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="d_w_u"></canvas>
                         <h2>World Urdu</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                </div>
+
+                <div class="container alin">
                     <div class="box">
                         <canvas id="d_b_e"></canvas>
                         <h2>Business English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="d_b_u"></canvas>
                         <h2>Business Urdu</h2>
@@ -153,43 +163,37 @@
 
 
             <div class=" tab-pane fade" id="TRIBUNE">
-                <div class="container">
+                <div class="container alin">
                     {{-- <h2>TRIBUNE</h2> --}}
                     <div class="box">
                         <canvas id="t_l_e"></canvas>
                         <h2>Latest English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="t_l_u"></canvas>
                         <h2>Latest Urdu</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                </div>
+
+                <div class="container alin">
                     <div class="box">
                         <canvas id="t_w_e"></canvas>
                         <h2>World English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                   
                     <div class="box">
                         <canvas id="t_w_u"></canvas>
                         <h2>World Urdu</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                </div>
+
+                <div class="container alin">
                     <div class="box">
                         <canvas id="t_b_e"></canvas>
                         <h2>Business English</h2>
                     </div>
-                    <div>
-                        <h2> </h2>
-                    </div>
+                    
                     <div class="box">
                         <canvas id="t_b_u"></canvas>
                         <h2>Business Urdu</h2>

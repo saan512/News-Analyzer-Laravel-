@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ScrapeAPIController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ChartController;
+use App\Http\Controllers\FarighController;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\DB;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/support', [FarighController::class, 'index'])->name('supportus');
 
 Auth::routes();
 

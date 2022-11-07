@@ -34,7 +34,7 @@
             <nav>
                 <ul>
                     {{-- <li><a href="{{URL::to('/Market')}}">Home</a></li> --}}
-                    <li><a href="Support.htm">Support Us</a></li>
+                    <li><a href="{{ route('supportus') }}">Support Us</a></li>
                     <li><a href="Docs.htm">Docs</a></li>
                     @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -74,7 +74,7 @@
 
                     so no worries, and don't forget to support us.
                     you can do it by going to the "support us" page. <br> Thanks </p>
-                <a href="Support.htm" class="btn btn-outline">Support Us</a>
+                <a href="{{ route('supportus') }}" class="btn btn-outline">Support Us</a>
             </div>
 
             <div class="showcase-form card">
@@ -90,9 +90,9 @@
                         <Label>Content &nbsp;:</Label>
                         <select name="type" id="type">
                             <option value="All">All</option>
-                            <option value="Laptop">Laptop</option>
-                            <option value="Computer">Computer</option>
-                            <option value="Mobile">Mobile</option>
+                            <option value="Laptop">ARY</option>
+                            <option value="Computer">DAWN</option>
+                            <option value="Mobile">TRIBUNE</option>
                         </select>
                     </div>
                     <input type="submit" value="Send" class="btn btn-primary">

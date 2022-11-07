@@ -113,7 +113,7 @@
                 <button class="card_news collapsible_type" >World News</button>
                 <div class="c_content">
                     <a href="http://127.0.0.10:8000/get-results-urdu/aryu_world" class="news_link">Urdu</a>
-                    <a href="http://127.0.0.10:8000/get-results-english/ary_world" onload=window.location='' class="news_link">English</a>
+                    <a href="http://127.0.0.10:8000/get-results-english/ary_world" class="news_link">English</a>
                 </div>
                 <button class="card_news collapsible_type ">Buisness</button>
                 <div class="c_content">
@@ -135,7 +135,7 @@
                 <div class="c_content">
                 <button class="card_news collapsible_type ">World News</button>
                 <div class="c_content">
-                    <a href="http://127.0.0.10:8000/get-results-urdu/dawnu_world" onclick="alert('Hello world!')" class="news_link">Urdu</a>
+                    <a href="http://127.0.0.10:8000/get-results-urdu/dawnu_world"  class="news_link">Urdu</a>
                     <a href="http://127.0.0.10:8000/get-results-english/dawn_world" class="news_link">English</a>
                 </div>
                 <button class="card_news collapsible_type">Buisness</button>

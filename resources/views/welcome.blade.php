@@ -79,7 +79,8 @@
 
             <div class="showcase-form card">
                 <h2>Request latest Market News</h2>
-                <form>
+                <form action="{{ route('SubscribeUs') }}" method="post">
+                    @csrf
                     <div class="form-control">
                         <input type="text" name="name" placeholder="Name" required>
                     </div >
@@ -90,9 +91,9 @@
                         <Label>Content &nbsp;:</Label>
                         <select name="type" id="type">
                             <option value="All">All</option>
-                            <option value="Laptop">ARY</option>
-                            <option value="Computer">DAWN</option>
-                            <option value="Mobile">TRIBUNE</option>
+                            <option value="ARY">ARY</option>
+                            <option value="DAWN">DAWN</option>
+                            <option value="TRIBUNE">TRIBUNE</option>
                         </select>
                     </div>
                     <input type="submit" value="Send" class="btn btn-primary">

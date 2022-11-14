@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ScrapeAPIController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ChartController;
 use App\Http\Controllers\FarighController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -22,9 +22,10 @@ use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('NewsAnalyzer');
 
 Route::get('/support', [FarighController::class, 'index'])->name('supportus');
+Route::post('/Subscribe', [MailController::class, 'subuser'])->name('SubscribeUs');
 
 Auth::routes();
 

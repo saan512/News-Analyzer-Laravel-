@@ -37,10 +37,16 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
     Route::get('settings',[AdminController::class,'settings'])->name('admin.settings');
 
 
-    Route::post('update-profile-info',[AdminController::class,'updateInfo'])->name('adminUpdateInfo');
+    Route::post('update-profile-info',[AdminController::class,'updateInfoAdmin'])->name('UpdateInfoAdmin');
     Route::post('change-profile-picture',[AdminController::class,'updatePicture'])->name('adminPictureUpdate');
     Route::post('change-password',[AdminController::class,'changePassword'])->name('adminChangePassword');
    
+    Route::get('results', [AdminController::class, 'results'])->name('admin.results');
+    Route::get('charts', [ChartController::class, 'index'])->name('admin.charts');
+
+    Route::get('Manage', [AdminController::class, 'manage'])->name('admin.manageUsers');
+    Route::get('User/edit/{id}', [AdminController::class, 'edit'])->name('admin.editUser');
+    Route::post('User/update/{id}', [AdminController::class, 'update'])->name('admin.updateUser');
 });
 
 Route::group(['prefix'=>'user', 'middleware'=>['isUser','auth','PreventBackHistory']], function(){
@@ -50,6 +56,9 @@ Route::get('profile',[UserController::class,'profile'])->name('user.profile');
 Route::get('settings',[UserController::class,'settings'])->name('user.settings');
 Route::get('results', [UserController::class, 'results'])->name('user.results');
 Route::get('charts', [ChartController::class, 'index'])->name('user.charts');
+Route::post('update-profile-info',[UserController::class,'updateInfoUser'])->name('userUpdateInfo');
+Route::post('change-profile-picture',[UserController::class,'updatePicture'])->name('userPictureUpdate');
+Route::post('change-password',[UserController::class,'changePassword'])->name('userChangePassword');
 });
 
 

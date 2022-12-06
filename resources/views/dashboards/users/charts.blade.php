@@ -9,6 +9,11 @@
 <head>
     {{-- <link rel="stylesheet" href="chart.css" type="text/css"> --}}
     <style>
+        
+        body {
+            background-image: url('{{url('img/login.jpg')}}');
+            }
+        
         /* for charts */
         .graphBox{
             align-items: baseline;

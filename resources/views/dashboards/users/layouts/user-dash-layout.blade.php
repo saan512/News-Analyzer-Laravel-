@@ -114,7 +114,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li> --}}
           <li class="nav-item">
-            <a href="#" class="nav-link {{ (request()->is('user/settings*')) ? 'active' : '' }}">
+            <a href="{{ route('user.settings')}}" class="nav-link {{ (request()->is('user/settings*')) ? 'active' : '' }}">
               <i class="nav-icon fas fa-cog"></i>
               {{-- {{ route('user.settings')}} --}}
               <p>

@@ -29,17 +29,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a class="nav-link" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
-        </a>
-
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-        </form>
-      </li>
     </ul>
 
 
@@ -76,6 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
                <li class="nav-item">
                 <a href="{{ route('admin.dashboard')}}" class="nav-link {{ (request()->is('admin/dashboard*')) ? 'active' : '' }}">
+                  <a href="{{ route('admin.charts')}}" class="nav-link">
                   <i class="nav-icon fas fa-home"></i>
                   <p>
                     Dashboard
@@ -83,10 +73,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
                <li class="nav-item">
-                <a href="{{ route('admin.profile')}}" class="nav-link {{ (request()->is('admin/profile*')) ? 'active' : '' }}">
+                <a href="{{ route('admin.manageUsers')}}" class="nav-link {{ (request()->is('admin/manage*')) ? 'active' : '' }}">
                   <i class="nav-icon fas fa-user"></i>
                   <p>
-                   Profile
+                   Managment
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.results')}}" class="nav-link {{ (request()->is('admin/result*')) ? 'active' : '' }}">
+                  <i class="nav-icon fa fa-database"></i>
+                                  
+                  <p>
+                   Result
                   </p>
                 </a>
               </li>
@@ -97,6 +96,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                Settings
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <i class="nav-icon fa fa-sign-out-alt"></i>
+                {{-- {{ __('Logout') }} --}}
+                <p>
+                    Logout
+                  </p>
+            </a>
+    
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
           </li>
         </ul>
       </nav>

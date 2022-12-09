@@ -24,9 +24,18 @@
             <h1 class="logo">News Analyzer</h1>
             <nav>
                 <ul>
-                    <li><a href="{{url('/home')}}">Home</a></li>
-                    <li><a href="{{url('supportus')}}">Support Us</a></li>
-                    <li><a href="Docs.htm">Docs</a></li>
+                    <li><a href="{{url('/')}}">Home</a></li>
+                   
+                    <li>    
+                                        
+                    <a href="{{ route('login') }}" >Log in</a>
+                    </li>
+                    <li>
+                    
+                    <a href="{{ route('register') }}">Register</a>
+                    
+                    </li>
+                    
                 </ul>
             </nav>
         </div>
@@ -40,12 +49,12 @@
                 <h2>Developers Information</h2>
                 <pre>
                    Name:   Syed Aqeel Abbas Naqvi
-                   Ph:     +923109279605
-                   Email:  aqeeshah273@gmail.com
+                   Ph:          +923109279605
+                   Email:     aqeeshah273@gmail.com
 
                    Name:   Muhammad Tauseef Anjum
-                   Ph:     Private
-                   Email:  Private
+                   Ph:          +92311-9625421
+                   Email:     tk749610@gmail.com
                </pre>
             </div>
 

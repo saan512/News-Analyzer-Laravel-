@@ -47,6 +47,10 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
     Route::get('Manage', [AdminController::class, 'manage'])->name('admin.manageUsers');
     Route::get('User/edit/{id}', [AdminController::class, 'edit'])->name('admin.editUser');
     Route::post('User/update/{id}', [AdminController::class, 'update'])->name('admin.updateUser');
+    Route::get('User/delete/{id}', [AdminController::class, 'delete'])->name('admin.deleteUser');
+
+    Route::get('sending-mails/to-subcribed-users', [AdminController::class, 'mailer'])->name('admin.AutoMailer');
+    
 });
 
 Route::group(['prefix'=>'user', 'middleware'=>['isUser','auth','PreventBackHistory']], function(){

@@ -53,7 +53,7 @@
             <div class="card-header p-2">
               <ul class="nav nav-pills">
                 <li class="nav-item"><a class="nav-link active" href="#personal_info" data-toggle="tab">Personal Information</a></li>
-                <li class="nav-item"><a class="nav-link" href="#change_password" data-toggle="tab">Change Password</a></li>
+                {{-- <li class="nav-item"><a class="nav-link" href="#change_password" data-toggle="tab">Change Password</a></li> --}}
               </ul>
             </div><!-- /.card-header -->
             <div class="card-body">
@@ -76,6 +76,28 @@
                         <span class="text-danger error-text email_error"></span>
                       </div>
                     </div>
+
+                    <div class="form-group row">
+                      <label for="inputName" class="col-sm-2 col-form-label">Old Passord</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputName" placeholder="Enter current password" name="oldpassword">
+                        <span class="text-danger error-text oldpassword_error"></span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputName2" class="col-sm-2 col-form-label">New Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="newpassword" placeholder="Enter new password" name="newpassword">
+                        <span class="text-danger error-text newpassword_error"></span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputName2" class="col-sm-2 col-form-label">Confirm New Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="cnewpassword" placeholder="ReEnter new password" name="cnewpassword">
+                        <span class="text-danger error-text cnewpassword_error"></span>
+                      </div>
+                    </div>
                     
                     <div class="form-group row">
                       <div class="offset-sm-2 col-sm-10">
@@ -85,7 +107,7 @@
                   </form>
                 </div>
                 <!-- /.tab-pane -->
-                <div class="tab-pane" id="change_password">
+                {{-- <div class="tab-pane" id="change_password">
                     <form class="form-horizontal" action="{{ route('userChangePassword') }}" method="POST" id="changePasswordAdminForm">
                       @csrf <!-- {{ csrf_field() }} -->
                       <div class="form-group row">
@@ -115,7 +137,7 @@
                         </div>
                       </div>
                     </form>
-                  </div>
+                  </div> --}}
               </div>
               <!-- /.tab-content -->
             </div><!-- /.card-body -->

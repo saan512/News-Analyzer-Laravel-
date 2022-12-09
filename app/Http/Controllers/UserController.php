@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 
 class UserController extends Controller
 {
-    use ResetsPasswords;
+    
 
     function index()
     {
@@ -56,28 +58,16 @@ class UserController extends Controller
         return view('dashboards.users.result', compact('sentiments_english' , 'scraped_data_english', 'sentiments_urdus', 'scraped_data_urdus'));
     }
 
-    function updateInfoUser(Request $request , $id){
-        dd("update-profile-info");
-        $user = User::find(auth()->user()->$id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-
-        $user->save();
-        return view('dashboards.users.settings');
+    function updateInfoUser(Request $request){
+        Auth::user()->name = $request->name;
+        Auth::user()->email = $request->email;
+        if($request->password) {
+            Auth::user()->password = Hash::make($request->password);
+            }
+        Auth::user()->save();
+        return redirect()->back()->with('success', 'Profile updated successfully!');
+        // return view('dashboards.users.settings');
    }
 
-   function changePassword(Request $request){
-    $request->validate([
-        'current_password' => 'required',
-        'new_password' => 'required|string|min:6|confirmed',
-    ]);
-    $admin = User::find(auth()->user()->id);
-    if (Hash::check($request->current_password, $admin->password)) {
-        $admin->password = Hash::make($request->new_password);
-        $admin->save();
-        return view('dashboards.admins.settings');
-    } else {
-        return redirect()->back()->with('error', 'Current password does not match!');
-    }
-}
+   
     }

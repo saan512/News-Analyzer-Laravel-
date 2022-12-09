@@ -35,7 +35,7 @@
                 <ul>
                     {{-- <li><a href="{{URL::to('/Market')}}">Home</a></li> --}}
                     <li><a href="{{ route('supportus') }}">Support Us</a></li>
-                    <li><a href="Docs.htm">Docs</a></li>
+                    {{-- <li><a href="Docs.htm">Docs</a></li> --}}
                     @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -143,37 +143,22 @@
     </section>
 
     {{-- <section class="Companies showcase" style="background-color: #4397eb; color: white;"> --}}
-        <section class="footer" style="color: white;">
+        <section class="footer">
             <footer id="footer" class="card">
-                <div class="container">
+                <div class="container_footer">
                     <div class="footer__top">                    
                         <div class="footer-top__box ">
-                            <h3>INFORMATION</h3>
+                            <h3>Contact Us</h3>
                             <a href="#">About Us</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms & Conditions</a>
-                            <a href="#">Contact Us</a>
-                            <a href="#">Site Map</a>
+                            
+                            
                         </div>
+                        
                         <div class="footer-top__box ">
-                            <h3>MY ACCOUNT</h3>
-                            <a href="#">My Account</a>
-                            <a href="#">Order History</a>
-                            <a href="#">Wish List</a>
-                            <a href="#">Newsletter</a>
-                            <a href="#">Returns</a>
-                        </div>
-                        <div class="footer-top__box ">
-                            <h3>CONTACT US</h3>
+                            <h3>Organization Information</h3>
                             <div>
                                 COMSATS UNIVERSITY ISLAMABAD,WAH CAMPUS
-                            </div>
-                            <div>
-                                BABA_G_KI_BOOTI@gmail.com
-                            </div>
-                            <div>                    
-                                0310-9279605
-                            </div>
+                            </div>                            
                             <div>                    
                                 Punjab,Pakistan
                             </div>

@@ -65,7 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
                <li class="nav-item">
                 <a href="{{ route('admin.dashboard')}}" class="nav-link {{ (request()->is('admin/dashboard*')) ? 'active' : '' }}">
-                  <a href="{{ route('admin.charts')}}" class="nav-link">
+                  {{-- <a href="{{ route('admin.charts')}}" class="nav-link"> --}}
                   <i class="nav-icon fas fa-home"></i>
                   <p>
                     Dashboard
@@ -81,11 +81,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
+                <a href="{{ route('admin.charts')}}" class="nav-link {{ (request()->is('admin/manage*')) ? 'active' : '' }}">
+                  <i class="nav-icon fa fa-chart-pie"></i>
+                                  
+                  <p>
+                  Charts
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{ route('admin.results')}}" class="nav-link {{ (request()->is('admin/result*')) ? 'active' : '' }}">
                   <i class="nav-icon fa fa-database"></i>
                                   
                   <p>
-                   Result
+                  News
                   </p>
                 </a>
               </li>

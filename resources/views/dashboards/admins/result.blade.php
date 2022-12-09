@@ -1,5 +1,5 @@
-@extends('dashboards.users.layouts.user-dash-layout')
-@section('title','Profile')
+@extends('dashboards.admins.layouts.admin-dash-layout')
+@section('title','News and Sentiments')
 
 @section('content')
 {{-- {{ $scraped_data }}
@@ -115,7 +115,8 @@
                     
                 </div>
             </div>
-        </div>        
+        </div>           
+            
        
     </body>
 

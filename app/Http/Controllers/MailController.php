@@ -18,8 +18,8 @@ class MailController extends Controller
         $sub_user->save();
 
         //call store function
-        
-        return redirect()->route('NewsAnalyzer')->with('success', 'Subscribed Successfully');
+        toastr()->success('Subscribed Successfully');
+        return redirect()->route('NewsAnalyzer');
 
 
 

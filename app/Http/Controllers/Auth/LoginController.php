@@ -66,7 +66,8 @@ class LoginController extends Controller
          }
  
         }else{
-            return redirect()->route('login')->with('error','Email and password are wrong');
+            toastr()->error('Email and password are wrong');
+            return redirect()->route('login');
         }
      }
 }

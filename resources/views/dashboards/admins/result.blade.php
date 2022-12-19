@@ -52,6 +52,7 @@
         </style>
     </head>
     <body>
+        <a href="{{ route('admin.manageResults') }}" class="btn btn-primary">Manage <i class="fa fa-database" aria-hidden="true"></i></a>
         <div class="container">
             <ul class="nav nav-pills nav-justified" role="tablist">
                 <li class="nav-item">

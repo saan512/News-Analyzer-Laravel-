@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         // $schedule->call('App\Http\Controllers\AdminController@mailer')->everyMinute();
+        $schedule->command('mail:daily')->everyMinute();
 
     }
 

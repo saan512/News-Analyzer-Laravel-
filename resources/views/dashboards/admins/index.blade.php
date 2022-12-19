@@ -15,6 +15,9 @@
             /* grid-template-rows: 0.5fr 0.5fr; */
             grid-gap: 15px;
         }
+        .container{
+            border-radius: 10px;
+        }
 
         .graphBox .box{
             background: #fff;
@@ -38,10 +41,43 @@
             color: #fff;
             transition: 0.6s;
         }
+        .subs{
+            /* display: flex; */
+            /* justify-content: space-between; */
+            margin: 4px 0px;
+            text-decoration: dashed underline #333;
+            
+            font-weight: bold;
+            
+            font-size: 20px;
+        }
+
+        
+        table , th, td{
+            /* border : 1px solid black; */
+            border-collapse: collapse;
+            /* width: 38%; */
+            min-width: 365px;
+            color: #333;
+            font-family: monospace;
+            font-size: 20px;
+            text-align: left;
+        }
+        table,th{
+            margin: 10px;
+        }
+        th, td{
+            /* border: 1px solid black; */
+            margin: 10px 0px;
+            padding: 5px 10px;
+            border-radius: 10px;
+           
+        }
 
         .fade{
             transition: 0.6s;
         }
+
         
 
         @media (max-width: 991px) {
@@ -83,14 +119,116 @@
                     </div>
                     
                 </div>
-            {{-- </div>
             
-           
-                </div> --}}
             </div> 
         </div>
         
     </div>
+
+    <br>
+
+    <div class="container boarder shadow">
+        <div>        
+            <h3 class="subs" style="display: inline-block; margin:10px;">Subcribers</h3>
+               
+            <a class="btn btn-success float-right" style="display: inline-block;" href="{{ route('admin.AutoMailer') }}"> News Letter</a>                              
+                      
+        </div>
+        <ul class="nav nav-pills nav-justified" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active ccl" data-toggle="pill" href="#ARY">ARY</a>
+              </li>      
+            <li class="nav-item">
+                <a class="nav-link ccl" data-toggle="pill" href="#DAWN">DAWN</a>
+              </li>      
+            <li class="nav-item">
+                <a class="nav-link ccl" data-toggle="pill" href="#TRIBUNE">Tribune</a>
+              </li>
+        </ul> 
+
+        <div class="tab-content" style="overflow: hidden">
+            <table id="DAWN"  class="tab-pane show fade active table-striped table-hover table-responsive">
+                
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Mail</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <span style="display:none">{{ $i=1 }}</span>
+                            @foreach($dawn_users as $dawn_user )
+                            <tr>
+                           
+                                
+                                <td scope="row">{{ $i++ }}</td>
+                                <td>{{ $dawn_user->name }}</td>
+                                <td>{{ $dawn_user->email }}</td>
+                                
+                            </tr>
+                            @endforeach
+                        </tbody>
+                
+                
+            </table>
+            <table id="ARY"  class="tab-pane show fade table-striped table-hover table-responsive">
+                
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Mail</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <span style="display:none">{{ $i=1 }}</span>
+                            @foreach($ary_users as $ary_user )
+                            <tr>
+                                
+                                
+                                <td scope="row">{{ $i++ }}</td>
+                                <td>{{ $ary_user->name }}</td>
+                                <td>{{ $ary_user->email }}</td>
+                                
+                            </tr>
+                            @endforeach
+                        </tbody>
+                
+                
+            </table>
+            <table id="TRIBUNE"  class="tab-pane show fade  table-striped table-hover table-responsive">
+                
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Mail</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <span style="display:none">{{ $i=1 }}</span>
+                            @foreach($tribune_users as $tribune_user )
+                            <tr>
+                                
+                                
+                                <td scope="row">{{ $i++ }}</td>
+                                <td>{{ $tribune_user->name }}</td>
+                                <td>{{ $tribune_user->email }}</td>
+                               
+                            </tr>
+                            @endforeach
+                        </tbody>
+                
+                
+            </table>
+
+        </div>
+        
+
+    </div>
+
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js" integrity="sha512-d6nObkPJgV791iTGuBoVC9Aa2iecqzJRE0Jiqvk85BhLHAPhWqkuBiQb1xz2jvuHNqHLYoN3ymPfpiB1o+Zgpw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>

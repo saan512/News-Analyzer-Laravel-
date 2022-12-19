@@ -46,14 +46,14 @@ class UserController extends Controller
     // }
     public function results()
     {
-        $sentiments_english = DB::table('sentiment_results')->pluck('sentiments')->sortByDesc('id');
+        $sentiments_english = DB::table('sentiment_results')->pluck('sentiments')->sortByDesc('id')->take(20);
         // get scraped_data from sentiment_results table
-        $scraped_data_english = DB::table('sentiment_results')->pluck('scraped_data')->sortByDesc('id');
+        $scraped_data_english = DB::table('sentiment_results')->pluck('scraped_data')->sortByDesc('id')->take(20);
 
         // get sentiments from sentiment_results_urdus table
-        $sentiments_urdus = DB::table('sentiment_results_urdus')->pluck('sentiments')->sortByDesc('id');
+        $sentiments_urdus = DB::table('sentiment_results_urdus')->pluck('sentiments')->sortByDesc('id')->take(20);
         // get scraped_data from sentiment_results_urdus table
-        $scraped_data_urdus = DB::table('sentiment_results_urdus')->pluck('scraped_data')->sortByDesc('id');
+        $scraped_data_urdus = DB::table('sentiment_results_urdus')->pluck('scraped_data')->sortByDesc('id')->take(20);
 
         return view('dashboards.users.result', compact('sentiments_english' , 'scraped_data_english', 'sentiments_urdus', 'scraped_data_urdus'));
     }

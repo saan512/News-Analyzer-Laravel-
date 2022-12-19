@@ -61,21 +61,23 @@
             <div class="tab-content">
                 <div id="ENGLISH" class="tab-pane show fade active">        
                     <table>
+                        <thead class="thead-dark">
                         
-                        <tr>
-                            <th class="id">
-                                User ID
-                            </th>
-                            <th class="">
-                                Name
-                            </th>
-                            <th class="">
-                                Email
-                            </th>
-                            <th>
-                                Manage User
-                            </th>
-                        </tr>
+                            <tr class="">
+                                <th class="">
+                                    User ID
+                                </th>
+                                <th class="">
+                                    Name
+                                </th>
+                                <th class="">
+                                    Email
+                                </th>
+                                <th>
+                                    Manage User
+                                </th>
+                            </tr>
+                        </thead>
                         <span style="display:none">{{ $i=1 }}</span>
                         @foreach ($users as $User)
                             <tr>
@@ -100,8 +102,8 @@
                 
                 
             </div>
-        </div><br><br>
-        <a class="btn btn-success float-right" href="{{ route('admin.AutoMailer') }}"> Hello Mail send krty hain jani</a>
+        </div>
+        
     </div>           
         
    

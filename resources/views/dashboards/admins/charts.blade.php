@@ -1,5 +1,5 @@
-@extends('dashboards.users.layouts.user-dash-layout')
-@section('title','Dashboard')
+@extends('dashboards.admins.layouts.admin-dash-layout')
+@section('title','Charts')
 
 @section('content')
 

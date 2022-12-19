@@ -42,7 +42,12 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
     Route::post('change-password',[AdminController::class,'changePassword'])->name('adminChangePassword');
    
     Route::get('results', [AdminController::class, 'results'])->name('admin.results');
-    Route::get('charts', [ChartController::class, 'index'])->name('admin.charts');
+    Route::get('manage_results', [AdminController::class, 'manageResults'])->name('admin.manageResults');
+    Route::get('deleteAll_results', [AdminController::class, 'deleteAll'])->name('admin.deleteAllResults');
+    Route::get('deleteAll_results/{id}', [AdminController::class, 'deleteSelective'])->name('admin.deleteSelectedResults');
+    Route::get('delete_result/{id}', [AdminController::class, 'deleteResultEnglish'])->name('admin.deleteResultEng');
+    Route::get('delete_result/{id}', [AdminController::class, 'deleteResultUrdu'])->name('admin.deleteResultUr');
+    Route::get('charts', [AdminController::class, 'adminCharts'])->name('admin.charts');
 
     Route::get('Manage', [AdminController::class, 'manage'])->name('admin.manageUsers');
     Route::get('User/edit/{id}', [AdminController::class, 'edit'])->name('admin.editUser');
